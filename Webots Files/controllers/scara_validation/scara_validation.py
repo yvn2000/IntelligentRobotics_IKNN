@@ -19,7 +19,7 @@ shaft_linear = robot.getDevice("shaft_linear_motor")
 #fixed configuration
 q1 = 0.0
 q2 = 0.0    #q2 > 0: +ve
-q4 = -0.1
+q4 = -0.175
 
 shoulder.setPosition(q1)
 elbow.setPosition(q2)
@@ -92,17 +92,38 @@ q4:
 Robot reached test configuration:
 q1 = 0.0000 rad
 q2 = 0.0000 rad
-q4 = -0.2000 rad
-INFO: 'scara_validation' controller exited successfully.
-TCP in ARM frame: x=0.6245, y=0.0000, z=0.0093
-TCP in world frame: x=0.625, y=0.000, z=0.009
-
-Robot reached test configuration:
-q1 = 0.0000 rad
-q2 = 0.0000 rad
 q4 = -0.1000 rad
 INFO: 'scara_validation' controller exited successfully.
 TCP in ARM frame: x=0.6245, y=-0.0000, z=0.0819
 TCP in world frame: x=0.624, y=-0.000, z=0.082
+
+Robot reached test configuration:
+q1 = 0.0000 rad
+q2 = 0.0000 rad
+q4 = -0.1500 rad
+INFO: 'scara_validation' controller exited successfully.
+TCP in world frame: x=0.624, y=-0.000, z=0.032
+TCP in ARM frame: x=0.6245, y=-0.0000, z=0.0319
+
+
+The next two are fucked because the arm hits the ground at approx q4 = -0.1726
+Hence why it never goes beyond 0.0093 which is roughly the ground limit.
+
+
+Robot reached test configuration:
+q1 = 0.0000 rad
+q2 = 0.0000 rad
+q4 = -0.1750 rad
+INFO: 'scara_validation' controller exited successfully.
+TCP in ARM frame: x=0.6245, y=-0.0000, z=0.0093
+TCP in world frame: x=0.625, y=-0.000, z=0.009
+
+Robot reached test configuration:
+q1 = 0.0000 rad
+q2 = 0.0000 rad
+q4 = -0.2000 rad
+INFO: 'scara_validation' controller exited successfully.
+TCP in ARM frame: x=0.6245, y=0.0000, z=0.0093
+TCP in world frame: x=0.625, y=0.000, z=0.009
 
 """
